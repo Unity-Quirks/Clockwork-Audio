@@ -17,8 +17,10 @@ Clockwork-Audio is an all-encompassing audio management package for Unity that s
 ## Getting Started
 | **How to Install?** | Comments |
 | ------------------- | -------- |
+| [Download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives) & add to Project | Recommend, Full control |
 | Using [Git URL](https://docs.unity3d.com/Manual/upm-ui-giturl.html) | Simple but no version control |
 | [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) and install as [local package](https://docs.unity3d.com/Manual/upm-ui-local.html) | Download & freely modify the package |
+
 
 ## License 📄
 This project is licensed under the MIT License.
