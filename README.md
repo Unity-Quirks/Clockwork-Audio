@@ -20,7 +20,7 @@ Right-Click to create new [Audio -> Audio Manager]
 ```cs
 using Quartzified.Audio;
 
-public class PlayEffects
+public class PlayEffects : MonoBehaviour
 {
   public EffectPack soundEffect;
 
