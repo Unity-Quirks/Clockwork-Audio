@@ -16,7 +16,9 @@ Clockwork-Audio is an all-encompassing audio management package for Unity that s
 
 ### Usage Example
 Ensure you have added the AudioManager into your main scene.  
-Right-Click to create new [Audio -> Audio Manager]
+Right-Click to create new [Audio -> Audio Manager]  
+
+To create AudioPacks simply Right-Click in the Project [Create -> Quartzified -> Audio -> "Pick your Pack"]
 ```cs
 using Quartzified.Audio;
 
@@ -31,6 +33,7 @@ public class PlayEffects : MonoBehaviour
   }
 }
 ```
+
 
 ### Installation
 | **How to Install?** | Comments |
