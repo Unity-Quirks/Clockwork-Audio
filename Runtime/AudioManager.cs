@@ -7,7 +7,7 @@ namespace Quartzified.Audio
 {
     public class AudioManager : MonoBehaviour
     {
-        static AudioManager instance;
+        static AudioManager instance; // Singleton instance of AudioManager.
         public static AudioManager Instance => instance;
 
         [Header("Music Settings")]
@@ -36,10 +36,13 @@ namespace Quartzified.Audio
         public float defaultMusicClipBlendDuration = 1f;
 
         [Header("Effect Settings")]
-        public GameObject effectSourcePrefab = null; // Effect Source Prefab which will be used in the source pool.
+        [Tooltip("Prefab used for creating audio sources for effects.")]
+        public GameObject effectSourcePrefab = null;
 
-        List<AudioSource> effectSourcePool = new List<AudioSource>();
-        int currentEffectSourceIndex = -1;
+        List<AudioSource> effectSourcePool = new List<AudioSource>(); // Pool of audio sources for playing effects.
+        int currentEffectSourceIndex = -1; // index of the currently used audio source.
+
+        // Returns the current effect source, or null if unavailable.
         AudioSource currentEffectSource => (currentEffectSourceIndex < 0 || effectSourcePool.Count <= 0 || effectSourcePool.Count < currentEffectSourceIndex) ? null : effectSourcePool[currentEffectSourceIndex];
 
         private void Awake()
@@ -65,6 +68,11 @@ namespace Quartzified.Audio
 
         #region Effect Manager
 
+        /// <summary>
+        /// Plays the specified audio effect from an EffectPack at a given index.
+        /// </summary>
+        /// <param name="effectPack"></param>
+        /// <param name="index"></param>
         public void PlayEffect(EffectPack effectPack, int index = 0)
         {
             if (effectPack.ClipCount <= 0 || index > effectPack.MaxIndex)
@@ -79,10 +87,19 @@ namespace Quartzified.Audio
 
             AudioClip playClip = effectPack.AudioClips[index];
 
+            if (effectPack.volumeOverride > 0)
+                playSource.volume = effectPack.volumeOverride;
+            else
+                playSource.volume = 1;
+
             playSource.clip = playClip;
             playSource.Play();
         }
 
+        /// <summary>
+        /// Plays a random audi effect from an EffectPack.
+        /// </summary>
+        /// <param name="effectPack"></param>
         public void PlayRandomEffect(EffectPack effectPack)
         {
             if (effectPack.ClipCount <= 0)
@@ -97,10 +114,17 @@ namespace Quartzified.Audio
 
             AudioClip playClip = effectPack.GetRandomClip();
 
+            if (effectPack.volumeOverride > 0)
+                playSource.volume = effectPack.volumeOverride;
+            else
+                playSource.volume = 1;
+
             playSource.clip = playClip;
             playSource.Play();
         }
 
+        // Gets the index for the next available effect audio source.
+        // If non found, we create one.
         int GetNextEffectLayerIndex()
         {
             AudioSource next = effectSourcePool.Find(layer => !layer.isPlaying);
@@ -117,11 +141,13 @@ namespace Quartzified.Audio
 
 
 #if UNITY_EDITOR
+
         [MenuItem("GameObject/Audio/Audio Manager", false, 0)]
         static void CreateAudioManager(MenuCommand menuCommand)
         {
             GameObject go = new GameObject("Audio Manager", typeof(AudioManager));
         }
+
 #endif
     }
 
