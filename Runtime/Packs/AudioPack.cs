@@ -15,8 +15,8 @@ namespace Quartzified.Audio
         public AudioMixerGroup mixerGroup;
 
         [Space]
-        [Tooltip("Overrides the default volume level for the audio pack.")]
-        public float volumeOverride = 0f;
+        [Tooltip("Play volume level for the audio pack.")]
+        [Range(0f, 1f)] public float playVolume = 1f;
 
         /// <summary>
         /// Gets the minimum index for audio clips.

@@ -87,10 +87,7 @@ namespace Quartzified.Audio
 
             AudioClip playClip = effectPack.AudioClips[index];
 
-            if (effectPack.volumeOverride > 0)
-                playSource.volume = effectPack.volumeOverride;
-            else
-                playSource.volume = 1;
+            playSource.volume = effectPack.playVolume;
 
             playSource.clip = playClip;
             playSource.Play();
@@ -114,10 +111,7 @@ namespace Quartzified.Audio
 
             AudioClip playClip = effectPack.GetRandomClip();
 
-            if (effectPack.volumeOverride > 0)
-                playSource.volume = effectPack.volumeOverride;
-            else
-                playSource.volume = 1;
+            playSource.volume = effectPack.playVolume;
 
             playSource.clip = playClip;
             playSource.Play();
