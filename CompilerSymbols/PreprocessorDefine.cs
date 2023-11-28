@@ -4,6 +4,8 @@
  * https://github.com/MirrorNetworking/Mirror
 */
 
+#if UNITY_EDITOR
+
 using System.Collections.Generic;
 using UnityEditor;
 
@@ -34,4 +36,4 @@ namespace Quartzified.Audio
     }
 }
 
-
+#endif
