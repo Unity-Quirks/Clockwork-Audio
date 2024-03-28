@@ -9,7 +9,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 
-namespace Quartzified.Audio
+namespace Quirks.Audio
 {
     static class PreprocessorDefine
     {

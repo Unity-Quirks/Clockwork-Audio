@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Quartzified.Audio
+namespace Quirks.Audio
 {
     public abstract partial class AudioPack : ScriptableObject
     {

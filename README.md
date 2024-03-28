@@ -7,8 +7,6 @@ Clockwork-Audio is an all-encompassing audio management package for Unity that s
 - **All-in-One Global Audio Management**: A centralized system for handling all your audio needs.
 - **Audio Pooling**: Reuse audio sources with an efficient pooling system to minimize overhead and ensure seamless playback.
 - **Scriptable Object-Based Audio Packs**: Organize your sounds and effects into reusable packs for consistent audio theming and easy management.
-
-## Upcoming Features 🛠️
 - **Music Transition Support**: Smooth transitions between music tracks to enhance your game's atmosphere.
 - **Simplfied Music Fades and Swaps**: Easily fade out one track and bring in another with minimal code.
 
@@ -18,9 +16,9 @@ Clockwork-Audio is an all-encompassing audio management package for Unity that s
 Ensure you have added the AudioManager into your main scene.  
 Right-Click to create new [Audio -> Audio Manager]  
 
-To create AudioPacks simply Right-Click in the Project [Create -> Quartzified -> Audio -> "Pick your Pack"]
+To create AudioPacks simply Right-Click in the Project [Create -> Quirks -> Audio -> "Pick your Pack"]
 ```cs
-using Quartzified.Audio;
+using Quirks.Audio;
 
 public class PlayEffects : MonoBehaviour
 {

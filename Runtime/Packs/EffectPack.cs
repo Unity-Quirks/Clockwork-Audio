@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Quartzified.Audio
+namespace Quirks.Audio
 {
-    [CreateAssetMenu(menuName = "Quartzified/Audio/Effect Pack", fileName = "New Effect Pack")]
+    [CreateAssetMenu(menuName = "Quirks/Audio/Effect Pack", fileName = "New Effect Pack")]
     public class EffectPack : AudioPack
     {
         /// <summary>
