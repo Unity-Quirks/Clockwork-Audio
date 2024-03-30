@@ -257,6 +257,8 @@ namespace Quirks.Audio
         static void CreateAudioManager(UnityEditor.MenuCommand menuCommand)
         {
             GameObject go = new GameObject("Audio Manager", typeof(AudioManager));
+
+            UnityEditor.Selection.activeGameObject = go;
         }
 
 #endif
