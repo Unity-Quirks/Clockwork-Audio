@@ -71,6 +71,12 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# DONT DO THIS IN YOUR OWN PROJECTS! (this only works cause its mostly code.)
 # Ignore meta files for scripts and folders
-*.cs.meta
-*/.meta
+!*.prefab.meta
+!*.unity.meta
+!*.mat.meta
+!*.asset.meta
+!*.anim.meta
+
+*.meta
