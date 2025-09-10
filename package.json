@@ -1,22 +1,21 @@
 {
     "name": "com.quirks.audio",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "displayName": "Clockwork-Audio",
     "description": "An all-encompassing audio management package for Unity.",
-    "unity": "2022.3",
-    "unityRelease": "11f1",
-    "documentationUrl": "",
+    "unity": "6000.0",
+    "documentationUrl": "https://github.com/Unity-Quirks/Clockwork-Audio#getting-started",
     "changelogUrl": "",
-    "licensesUrl": "",
+    "licensesUrl": "https://github.com/Unity-Quirks/Clockwork-Audio/blob/main/LICENSE",
     "keywords": [
-      "Quirks",
-      "Clockwork",
-      "Audio"
+      "audio",
+      "sound",
+      "music",
+      "manager"
     ],
     "author": {
       "name": "Quartzi",
-      "email": "",
-      "url": "https://github.com/Unity-Quirks/Clockwork-Audio"
+      "url": "https://github.com/Unity-Quirks"
     },
     "type": "tool"
   }

@@ -12,21 +12,21 @@ namespace Quirks.Audio
         /// <summary>
         /// Plays the first music clip in the pack.
         /// </summary>
-        public void Play() => AudioManager.Instance.PlayMusic(this);
+        public void Play() => AudioManagerRegistry.Current.PlayMusic(this);
 
         /// <summary>
         /// Plays the first music clip in the pack with a given Fade blend Time.
         /// </summary>
-        public void Play(float blendOutTime, float blendInTime) => AudioManager.Instance.PlayMusic(this, 0, 0, blendOutTime, blendInTime);
+        public void Play(float blendOutTime, float blendInTime) => AudioManagerRegistry.Current.PlayMusic(this, 0, 0, blendOutTime, blendInTime);
 
         /// <summary>
         /// Plays a random music clip from this pack.
         /// </summary>
-        public void PlayRandom() => AudioManager.Instance.PlayMusic(this, Random.Range(0, ClipCount));
+        public void PlayRandom() => AudioManagerRegistry.Current.PlayMusic(this, Random.Range(0, ClipCount));
 
         /// <summary>
         /// Plays a random music clip from this pack with a given Fade blend Time.
         /// </summary>
-        public void PlayRandom(float blendOutTime, float blendInTime) => AudioManager.Instance.PlayMusic(this, Random.Range(0, ClipCount), 0, blendOutTime, blendInTime);
+        public void PlayRandom(float blendOutTime, float blendInTime) => AudioManagerRegistry.Current.PlayMusic(this, Random.Range(0, ClipCount), 0, blendOutTime, blendInTime);
     }
 }
