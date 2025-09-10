@@ -1,12 +1,16 @@
 artifacts/**
 build/**
 .DS_Store
+
 .npmrc
 .npmignore
+
 .git
 .gitignore
 .gitlab-ci.yml
+
 Scripts
 Scripts.meta
+
 Tests
 Tests.meta
