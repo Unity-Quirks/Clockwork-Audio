@@ -10,7 +10,4 @@ build/**
 .gitlab-ci.yml
 
 Scripts
-Scripts.meta
-
 Tests
-Tests.meta
